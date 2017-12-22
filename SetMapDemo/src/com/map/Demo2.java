@@ -20,6 +20,8 @@ public class Demo2 {
 		map.put(1002,"joy");
 		map.put(1003,"varun"); //replace the duplicates
 		map.put(null , "FFFF");
+		map.put(2005,"tarun");
+		map.put(2006, "vasu");
 		System.out.println("Iterating using keyset()");
 		Set<Integer> set = map.keySet();
 		for(Integer key : set){

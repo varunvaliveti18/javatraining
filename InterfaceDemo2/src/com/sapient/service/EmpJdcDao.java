@@ -35,6 +35,8 @@ public class EmpJdcDao implements Idao{
 			
 		}catch(Exception ex){
 			System.out.println(ex.getMessage());
+		}finally{
+			closeConn(conn);
 		}
 		return lst;
 	}
