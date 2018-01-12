@@ -31,18 +31,6 @@ public class ExamSerImpl implements IExamSer{
 		return ser;
 	}
 
-	@Override
-	public List<Question> genrateQuestions() {
-		List<Question> lst = new ArrayList<>();
-		Set<Integer> qids = ExamUtil.generateUniqueNos(5);
-		Question ques = null;
-		for (int qno: qids){
-			ques = qmap.get(qno);
-			lst.add(ques);
-		}
-		
-			return lst;
-	}
 
 	@Override
 	public int evaluate(List<Answer> alist) {
@@ -56,6 +44,22 @@ public class ExamSerImpl implements IExamSer{
 	
 		return score;
 	}
+
+
+	@Override
+	public List<Question> genrateQuestions(int nos) {
+		List<Question> lst = new ArrayList<>();
+		Set<Integer> qids = ExamUtil.generateUniqueNos(nos);
+		Question ques = null;
+		for (int qno: qids){
+			ques = qmap.get(qno);
+			lst.add(ques);
+		}
+		
+			return lst;
+	}
+
+	
 	
 	
 }

@@ -7,7 +7,7 @@ import com.sapient.vo.Question;
 
 public interface IExamSer {
 	
-	List<Question> genrateQuestions();
+	List<Question> genrateQuestions(int nos);
 	int evaluate(List<Answer> alist);
 
 }
